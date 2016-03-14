@@ -1,0 +1,21 @@
+<h1>Movies#edit</h1>
+<p>Find me in app/views/movies/new.html.erb</p>
+<p>
+<%= form_for(@movie,url:{action:'update',sid:@movie}) do |f|%>
+
+
+<table>
+	<tr>
+		<td>movie_name:</td><td><%= f.text_field:name %></td>
+	</tr>
+	<tr>
+		<td>movie_director:</td><td><%= f.text_field:director %></td>
+	</tr>
+	<tr>
+		<td colspan=2> <%= f.submit "update" %>  </td>
+	</tr>
+</table>
+
+<% end %>
+</p>
+ 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theatre_id: 1
+  customer_id: 1
+  seat_no: 1
+  price: 1
+
+two:
+  theatre_id: 1
+  customer_id: 1
+  seat_no: 1
+  price: 1

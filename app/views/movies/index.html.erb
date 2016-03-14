@@ -1,0 +1,29 @@
+
+<center>
+<h1>List Of Movies</h1>
+</center>
+<hr/>
+<center>
+<p>
+	<table border=1 width=800px height=600px>
+	<tr>
+		<th >movie_name</th><th>movie_director</th><th colspan=5>actions</th>
+	</tr>
+<% @movie.each do |mov| %>
+
+	<tr>
+<td style="font-size:25px"><%= mov.name %></td><td style="font-size:25px"><%= mov.director %>
+</td>
+	<td style="font-size:25px"><%= link_to "THEATRES", movies_ftheatres_path(sid:mov) %></td>
+		<td style="font-size:25px"><%= link_to "SHOW", movies_show_path(sid:mov) %></td>
+		<td style="font-size:25px"><%= link_to "EDIT", movies_edit_path(sid:mov) %></td>
+		
+	</tr>
+<% end %>
+</table>
+</p>
+
+<p>
+	<%= link_to "createnewmovie",movies_new_path %>
+</p>
+</center>

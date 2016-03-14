@@ -1,0 +1,39 @@
+<p class="header" >
+<center>
+	
+<h1>List Of Theatres</h1>
+
+  
+
+     
+</center>
+<hr/>
+</p>
+
+<center>
+
+<center>
+<h2>Theatres For Your Selected Movie </h2>
+</center>
+
+<% #raise @tarr.inspect%>
+
+
+
+<p>
+	<table border=1 width=600px height=200px>
+	<tr>
+		<th>THEATRE_NAME</th><th>OWNER_NAME</th><th colspan=5>ACTIONS</th>
+    </tr>
+    <% for i in 0..(@tarr.length)-1 %>
+    <tr>
+    	<td style="font-size:200%"><%= @tarr[i].name %></td>
+    	<td style="font-size:200%"><%= @tarr[i].owner %></td>
+        <td style="font-size:200%"><%= link_to 'tickets_availability',tickets_index_path(th_id:@tarr[i].id) %></td>
+    	
+    </tr>
+   <%end%>
+</table>
+</p>
+
+</center>

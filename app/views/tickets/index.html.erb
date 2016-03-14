@@ -1,0 +1,26 @@
+
+<center><h1>TICKETS AVAILABLITY PAGE</h1></center>
+<hr/>
+
+<center>
+<h3>NO_OF_TICKETS_AVAILABLE:<%=@ticcount %></h3>
+
+
+<p>
+	<table border=1 width=600px height=200px>
+	<tr>
+		<th>SEAT_NO</th><th>TICKET_COST</th><th>AVAILABLE_DATE</th><th>CLICK_TO_BOOK</th>
+    </tr>
+    <% @tickets.each do |tic| %>
+    <tr>
+    	<td><%= tic.seat_no %></td>
+    	<td><%= tic.price %></td>
+    	<td><%= Time.now.strftime("%m/%d/%Y") %></td>
+    	<td><%= link_to 'BOOK',tickets_show_path(tic_id:tic.id) %></td>
+    	
+    </tr>
+   <%end%>
+</table>
+</p>
+
+</center>
