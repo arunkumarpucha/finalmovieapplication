@@ -3,7 +3,7 @@ class LoginsController < ApplicationController
 
   # GET /logins
   # GET /logins.json
-  #My insertion to check merging into local system for testing for LoginController
+  #My reply to server git hub to check it is effected in remote
   def index
     @logins = Login.all
   end
