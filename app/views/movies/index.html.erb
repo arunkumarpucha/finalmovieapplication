@@ -14,7 +14,7 @@
 	<tr>
 <td style="font-size:25px"><%= mov.name %></td><td style="font-size:25px"><%= mov.director %>
 </td>
-	<td style="font-size:25px"><%= link_to "THEATRES", movies_ftheatres_path(sid:mov) %></td>
+	<td style="font-size:25px"><%= link_to "THEATRES", findtheatres_path(sid:mov) %></td>
 		<td style="font-size:25px"><%= link_to "SHOW", movies_show_path(sid:mov) %></td>
 		<td style="font-size:25px"><%= link_to "EDIT", movies_edit_path(sid:mov) %></td>
 		

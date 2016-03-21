@@ -16,7 +16,7 @@
     	<td><%= tic.seat_no %></td>
     	<td><%= tic.price %></td>
     	<td><%= Time.now.strftime("%m/%d/%Y") %></td>
-    	<td><%= link_to 'BOOK',tickets_show_path(tic_id:tic.id) %></td>
+    	<td><%= link_to 'BOOK',bookingticket_path(tic_id:tic.id) %></td>
     	
     </tr>
    <%end%>

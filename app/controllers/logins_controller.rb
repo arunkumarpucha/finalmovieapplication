@@ -3,7 +3,7 @@ class LoginsController < ApplicationController
 
   # GET /logins
   # GET /logins.json
-  #My reply to server git hub to check it is effected in remote
+  #My reply to server
   def index
     @logins = Login.all
   end
@@ -38,7 +38,7 @@ class LoginsController < ApplicationController
 
     if @namerec!=nil
       if @namerec.user_name==cusername && @namerec.phone_no==cphoneno
-        redirect_to movies_index_path
+        redirect_to movieslist_path
       end
     else
       redirect_to signups_new_path

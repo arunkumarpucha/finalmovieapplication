@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :logins
   resources :signups
+
+
   get 'logins/new'
   get 'signups/new'
   get 'customers/new'
@@ -19,9 +21,12 @@ Rails.application.routes.draw do
 
   post 'tickets/update'
 
-  get 'tickets/show'
+  #get 'tickets/show'
+  match 'bookingticket'=>'tickets#show',via: :'get'
 
-  get 'tickets/index'
+  #get 'tickets/index'
+
+  match 'ticketslist' => 'tickets#index',via: :'get'
 
   get 'theatre_details/new'
 
@@ -43,9 +48,15 @@ Rails.application.routes.draw do
 
   get 'movies/show'
 
-  get 'movies/index'
+  
 
-  get 'movies/ftheatres'
+  #get 'movies/index'
+
+  match "movieslist" => "movies#index",via: :'get'
+
+  #get 'movies/ftheatres'
+
+  match "findtheatres" => "movies#ftheatres",via: :'get'
 
   get 'theatres/new'
 

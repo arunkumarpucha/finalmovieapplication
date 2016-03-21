@@ -29,7 +29,7 @@
     <tr>
     	<td style="font-size:200%"><%= @tarr[i].name %></td>
     	<td style="font-size:200%"><%= @tarr[i].owner %></td>
-        <td style="font-size:200%"><%= link_to 'tickets_availability',tickets_index_path(th_id:@tarr[i].id) %></td>
+        <td style="font-size:200%"><%= link_to 'tickets_availability',ticketslist_path(th_id:@tarr[i].id) %></td>
     	
     </tr>
    <%end%>
