@@ -69,11 +69,23 @@ class SignupsController < ApplicationController
     end
   end
 
-  private
+ 
     # Use callbacks to share common setup or constraints between actions.
     def set_signup
       @signup = Signup.find(params[:id])
+      if @signup.role='admin'
+        $status='a'
+      else
+        $status='u'
+
+      end
+
     end
+
+      
+     
+
+    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signup_params

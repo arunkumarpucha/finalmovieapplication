@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+ before_action :movieauth, only: [:show, :edit, :update, :destroy]
+
   def new
     @movie=Movie.new
 
@@ -30,6 +32,8 @@ class MoviesController < ApplicationController
 
   def index
   	@movie=Movie.all
+    $crole=params[:usrrole]
+
 
   end
 
@@ -75,5 +79,19 @@ class MoviesController < ApplicationController
       redirect_to theatres_index_path(:tids => @theatresids)
 
   end
+
+  def movieauth
+
+  if $crole=='admin'
+  
+
+    else
+        
+    redirect_to root_path,notice:"you dont have adminrights to access use this link"
+    
+    end
+  end
+
+  
 
 end

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :logins
   resources :signups
 
-
-  get 'logins/new'
+  root to: 'logins#new'
+  #get 'logins/new'
   get 'signups/new'
   get 'customers/new'
 
